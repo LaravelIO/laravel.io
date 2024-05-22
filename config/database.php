@@ -93,6 +93,25 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'pulse' => [
+            'driver' => 'mysql',
+            'url' => env('PULSE_DATABASE_URL'),
+            'host' => env('PULSE_DB_HOST', '127.0.0.1'),
+            'port' => env('PULSE_DB_PORT', '3306'),
+            'database' => env('PULSE_DB_DATABASE', 'pulse'),
+            'username' => env('PULSE_DB_USERNAME', 'pulse'),
+            'password' => env('PULSE_DB_PASSWORD', ''),
+            'unix_socket' => env('PULSE_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
     ],
 
     /*

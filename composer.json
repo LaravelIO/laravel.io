@@ -19,6 +19,7 @@
         "laravel-notification-channels/twitter": "^8.1.1",
         "laravel/framework": "^10.0",
         "laravel/horizon": "^5.12",
+        "laravel/pulse": "^1.0@beta",
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.6",
         "laravel/tinker": "^2.8",
@@ -98,6 +99,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }

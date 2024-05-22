@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Blade;
 
 Blade::directive('md', function ($expression) {
+
+   if (empty($expression)) {
+       return "<?php echo '@md'; ?>";
+    }
+
     return "<?php echo md_to_html($expression); ?>";
 });
 
