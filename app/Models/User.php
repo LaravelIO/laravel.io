@@ -5,7 +5,11 @@ namespace App\Models;
 use App\Concerns\HasTimestamps;
 use App\Concerns\PreparesSearch;
 use App\Enums\NotificationType;
+use App\Policies\UserPolicy;
 use Carbon\Carbon;
+use Filament\Facades\Filament;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,7 +21,7 @@ use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Scout\Searchable;
 
-final class User extends Authenticatable implements MustVerifyEmail
+final class User extends Authenticatable implements MustVerifyEmail, FilamentUser
 {
     use HasApiTokens;
     use HasFactory;
@@ -409,5 +413,12 @@ final class User extends Authenticatable implements MustVerifyEmail
             ->contains(function ($notificationType) use ($notification) {
                 return NotificationType::from($notificationType)->getClass() === $notification;
             });
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        $guard = Filament::getAuthGuard();
+
+        return Auth::guard($guard)->user()->can(UserPolicy::ADMIN, User::class);
     }
 }

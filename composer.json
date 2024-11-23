@@ -11,6 +11,7 @@
         "blade-ui-kit/blade-ui-kit": "^0.6.3",
         "blade-ui-kit/blade-zondicons": "^1.5",
         "codeat3/blade-simple-icons": "^5.0",
+        "filament/filament": " ^3.2",
         "guzzlehttp/guzzle": "^7.2",
         "intervention/image": "^2.7",
         "laravel-notification-channels/telegram": "^5.0",
@@ -74,7 +75,8 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "setup": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
