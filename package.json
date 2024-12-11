@@ -15,6 +15,7 @@
         "choices.js": "^10.2.0",
         "highlight.js": "^11.9.0",
         "laravel-vite-plugin": "^1.0.1",
+        "pixelmatch": "^5.0.0",
         "postcss": "^8.4.31",
         "postcss-import": "^16.0.0",
         "tailwindcss": "^3.0.2",

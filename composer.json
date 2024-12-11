@@ -13,7 +13,7 @@
         "codeat3/blade-simple-icons": "^5.0",
         "guzzlehttp/guzzle": "^7.2",
         "innocenzi/bluesky-notification-channel": "^0.2.0",
-        "intervention/image": "^2.7",
+        "intervention/image": "^3.0",
         "laravel-notification-channels/telegram": "^5.0",
         "laravel-notification-channels/twitter": "^8.1.1",
         "laravel/framework": "^11.5",
@@ -41,7 +41,8 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
         "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0"
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "spatie/pixelmatch-php": "^1.1"
     },
     "autoload": {
         "files": [

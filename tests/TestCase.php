@@ -13,4 +13,9 @@ class TestCase extends IlluminateTestCase
     {
         $job->handle();
     }
+
+    public function getStub(string $nameOfStub): string
+    {
+        return __DIR__ . "/stubs/{$nameOfStub}";
+    }
 }
