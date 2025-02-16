@@ -13,7 +13,7 @@
         "codeat3/blade-simple-icons": "^6.2",
         "guzzlehttp/guzzle": "^7.2",
         "innocenzi/bluesky-notification-channel": "^0.2.0",
-        "intervention/image": "^2.7",
+        "intervention/image": "^3.11",
         "laravel-notification-channels/telegram": "^5.0",
         "laravel-notification-channels/twitter": "^8.1.1",
         "laravel/framework": "^11.5",
