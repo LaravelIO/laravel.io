@@ -12,7 +12,7 @@
         "algoliasearch": "^4.8.4",
         "autoprefixer": "^10.4.0",
         "axios": "^1.6",
-        "choices.js": "^10.2.0",
+        "choices.js": "^11.0.3",
         "highlight.js": "^11.9.0",
         "laravel-vite-plugin": "^1.0.1",
         "postcss": "^8.4.31",
